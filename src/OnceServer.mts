@@ -1,15 +1,15 @@
-// import Once, {
-//   OnceMode,
-//   OnceState,
-// } from "../../../../Once/dist/once.ts/main/3_services/Once.interface.mjs";
+import Once, {
+  OnceMode,
+  OnceState,
+} from "../../../../Once/dist/once.ts/main/3_services/Once.interface.mjs";
 //@ts-ignore
 import fastify from "../../node_modules/fastify/fastify.js";
 
-export default class OnceNodeServer /*implements Once*/ {
+export default class OnceNodeServer implements Once {
   ENV = process.env;
   creationDate: Date;
-  // mode = OnceMode.NODE_JS;
-  // state = OnceState.INITIALIZED;
+  mode = OnceMode.NODE_JS;
+  state = OnceState.INITIALIZED;
   runningPort: number | undefined;
 
   static async start() {
