@@ -36,12 +36,13 @@ export default class OnceNodeServer implements Once {
 
     this.runningPort = 3000;
 
-    //@ts-ignore
-    server.listen(3000, (err, address) => {
-      if (err) throw err;
-      // console.log(`App listening on ${address}`);
-    });
-
+    try {
+      //@ts-ignore
+      server.listen(3000, (err, address) => {
+        if (err) throw err;
+        // console.log(`App listening on ${address}`);
+      });
+    } catch(err) {console.error(err)}
     console.log("ONCE STARTED AS NODE_JS, EXTERNAL MODULE");
   }
 }
