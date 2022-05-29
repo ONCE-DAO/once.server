@@ -1,7 +1,7 @@
 import Once, {
   OnceMode,
   OnceState,
-} from "../../../../Once/dist/once.ts/main/3_services/Once.interface.mjs";
+} from "../../../../Thinglish/dist/thinglish/main/3_services/Once.interface.mjs";
 //@ts-ignore
 import fastify from "../../node_modules/fastify/fastify.js";
 
@@ -42,7 +42,9 @@ export default class OnceNodeServer implements Once {
         if (err) throw err;
         // console.log(`App listening on ${address}`);
       });
-    } catch(err) {console.error(err)}
+    } catch (err) {
+      console.error(err);
+    }
     console.log("ONCE STARTED AS NODE_JS, EXTERNAL MODULE");
   }
 }
