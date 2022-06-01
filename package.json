@@ -1,7 +1,9 @@
 {
   "name": "once.server",
-  "package":"tla.EAM.Once",
-  "onceDependencies":["thinglish"],
+  "package": "tla.EAM.Once",
+  "onceDependencies": [
+    "thinglish"
+  ],
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -17,7 +19,7 @@
     "jest": "^28.1.0",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.7.1-rc"
+    "typescript": "4.7.2"
   },
   "dependencies": {
     "fastify": "^3.29.0"
