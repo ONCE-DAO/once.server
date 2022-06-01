@@ -2,8 +2,7 @@ import Once, {
   OnceMode,
   OnceState,
 } from "../../../../Thinglish/dist/thinglish/main/3_services/Once.interface.mjs";
-//@ts-ignore
-import fastify from "../../node_modules/fastify/fastify.js";
+import fastify from "fastify";
 
 export default class OnceNodeServer implements Once {
   ENV = process.env;
@@ -32,7 +31,7 @@ export default class OnceNodeServer implements Once {
 
     server.get("/", async (request, reply) => {
       reply.type("application/json").code(200);
-      return { hello: "world" };
+      return { hello: "once" };
     });
 
     this.runningPort = 3000;
