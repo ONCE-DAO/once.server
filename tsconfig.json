@@ -2,7 +2,7 @@
   "extends": "./../../../../../../tsconfig",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "../../dist/once.server/main",
+    "outDir": "../../dist/once.server/main"
   },
   "include": [
     "./src/**/*"
