@@ -20,7 +20,6 @@ export default class OnceNodeServer implements Once {
   }
   async start(): Promise<void> {
     // WATCHMODE
-    console.log("test")
     if (process.env.NODE_ENV === "watch") {
       setInterval(function () {
         console.log("timer that keeps nodejs processing running");
