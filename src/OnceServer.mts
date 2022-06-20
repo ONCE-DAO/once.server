@@ -1,7 +1,7 @@
 import Once, {
   OnceMode,
   OnceState,
-} from "../../../../../../Scenarios/localhost/tla/EAM/Thinglish/main/3_services/Once.interface.mjs";
+} from "../../../../../../../Scenarios/localhost/tla/EAM/Thinglish/main/dist/3_services/Once.interface.mjs";
 import fastify from "fastify";
 
 export default class OnceNodeServer implements Once {
