@@ -1,6 +1,6 @@
 {
-  "name": "once.server",
-  "namespace": "tla.EAM",
+  "name": "server",
+  "namespace": "tla.EAM.Once",
   "onceDependencies": [
     "thinglish"
   ],
