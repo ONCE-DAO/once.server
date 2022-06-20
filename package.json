@@ -2,7 +2,7 @@
   "name": "server",
   "namespace": "tla.EAM.Once",
   "onceDependencies": [
-    "thinglish"
+    "once.ts"
   ],
   "version": "0.0.1",
   "description": "",
