@@ -25,7 +25,7 @@ export default class OnceNodeServer implements Once {
 
     server.get("/", async (request, reply) => {
       reply.type("application/json").code(200);
-      return { hello: "once" };
+      return { hello: "once!!!" };
     });
 
     this.runningPort = 3000;
