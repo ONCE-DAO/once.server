@@ -1,21 +1,20 @@
-import Once, {
-  OnceMode,
-  OnceState,
-} from "../../../../../../../Scenarios/localhost/tla/EAM/Thinglish/dev/3_services/Once.interface.mjs";
+// TODO@MERGE remove npm dependency when moving back Server to own module
 import fastify from "fastify";
+import { BaseNodeOnce } from "ior:esm:/tla.EAM.Once[dev]";
+import { EAMD } from "ior:esm:/tla.EAM.Once[dev]";
+import { OnceMode, OnceState } from "ior:esm:/tla.EAM.Once[dev]";
 
-export default class OnceNodeServer implements Once {
+export default class OnceNodeServer extends BaseNodeOnce {
   ENV = process.env;
   creationDate: Date;
   mode = OnceMode.NODE_JS;
   state = OnceState.INITIALIZED;
   runningPort: number | undefined;
 
-  static async start() {
-    return new OnceNodeServer();
-  }
 
-  constructor() {
+
+  constructor(eamd: EAMD) {
+    super(eamd);
     this.creationDate = new Date();
   }
   global: typeof globalThis = global;

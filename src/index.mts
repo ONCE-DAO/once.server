@@ -1,3 +1,2 @@
 import OnceNodeServer from "./OnceServer.mjs";
-
-OnceNodeServer
+export { OnceNodeServer };
