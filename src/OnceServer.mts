@@ -22,8 +22,7 @@ export default class OnceNodeServer extends BaseNodeOnce {
 
   async start(): Promise<void> {
 
-    this.webserver = new DefaultOnceWebserver();
-    await this.webserver.start();
+    await DefaultOnceWebserver.start();
     console.log("ONCE STARTED AS NODE_JS WITH EXTERNAL MODULE");
   }
 
