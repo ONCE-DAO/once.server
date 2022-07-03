@@ -3,7 +3,7 @@ import { BaseNodeOnce } from "ior:esm:/tla.EAM.Once[dev-merge]";
 import { EAMD } from "ior:esm:/tla.EAM.Once[dev-merge]";
 import { OnceMode, OnceState } from "ior:esm:/tla.EAM.Once[dev-merge]";
 
-import DefaultOnceWebserver from "ior:esm:/tla.EAM.Once.Server.OnceWebserver[build]";
+import DefaultOnceWebserver from "ior:esm:/tla.EAM.Once.Server.WebServer[build]";
 
 export default class OnceNodeServer extends BaseNodeOnce {
   ENV = process.env;
