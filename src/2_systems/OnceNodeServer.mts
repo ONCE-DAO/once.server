@@ -1,7 +1,7 @@
-import { NodeOnce, OnceMode, OnceState, Once } from "ior:esm:/tla.EAM.Once[build]";
+import { OnceMode, OnceState, Once, AbstractNodeOnce } from "ior:esm:/tla.EAM.Once[build]";
 import DefaultOnceWebServer from "ior:esm:/tla.EAM.Once.Server.WebServer[build]";
 
-export default class OnceNodeServer extends NodeOnce {
+export default class OnceNodeServer extends AbstractNodeOnce {
   webserver: DefaultOnceWebServer | undefined;
   mode = OnceMode.NODE_JS;
   state = OnceState.INITIALIZED;
@@ -11,7 +11,7 @@ export default class OnceNodeServer extends NodeOnce {
     await DefaultOnceWebServer.start();
   }
 
-  static start():Promise<Once>{
+  static start(): Promise<Once> {
     return super.start()
   }
 }
