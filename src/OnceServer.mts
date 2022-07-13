@@ -1,9 +1,10 @@
 // TODO@MERGE remove npm dependency when moving back Server to own module
-import { BaseNodeOnce } from "ior:esm:/tla.EAM.Once[dev]";
-import { EAMD } from "ior:esm:/tla.EAM.Once[dev]";
-import { OnceMode, OnceState } from "ior:esm:/tla.EAM.Once[dev]";
+import { BaseNodeOnce, EAMD, OnceMode, OnceState } from "ior:esm:/tla.EAM.Once[dev]";
+
+if (BaseNodeOnce === undefined) throw new Error("No BaseNodeOnce")
 
 import DefaultOnceWebserver from "ior:esm:/tla.EAM.Once.Server.OnceWebserver[main]";
+
 
 export default class OnceNodeServer extends BaseNodeOnce {
   ENV = process.env;
