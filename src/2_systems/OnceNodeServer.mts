@@ -7,6 +7,7 @@ export default class OnceNodeServer extends AbstractNodeOnce {
   state = OnceState.INITIALIZED;
 
   async start(): Promise<void> {
+    await super.start();
     console.log("OnceNodeServer started");
     await DefaultOnceWebServer.start();
   }
